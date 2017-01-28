@@ -11,21 +11,25 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 export class IndexComponent implements OnInit {
   quotes: FirebaseListObservable<any[]>;
   hideIntro = true;
-  getQuote = false;
   quoteToDisplay;
-  randomNumber = Math.floor(Math.random() * ((35 - 1) + 1)) + 1;
-
 
   constructor(private quoteService: QuoteService) { }
 
   egoCheck(){
     this.hideIntro = false;
-    this.getQuote = true;
+  }
+
+  randomNumber(){
+    return Math.floor(Math.random() * ((35 - 1) + 1)) + 1;
+  }
+
+  newQuote(){
+    this.quoteToDisplay = this.quoteService.getQuoteById(this.randomNumber());
   }
 
   ngOnInit() {
     this.quotes = this.quoteService.getQuotes();
-    this.quoteToDisplay = this.quoteService.getQuoteById(this.randomNumber);
-  }
+    this.quoteToDisplay = this.quoteService.getQuoteById(this.randomNumber());
+    }
 
 }
