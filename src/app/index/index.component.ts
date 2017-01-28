@@ -12,6 +12,9 @@ export class IndexComponent implements OnInit {
   quotes: FirebaseListObservable<any[]>;
   hideIntro = true;
   getQuote = false;
+  quoteToDisplay;
+  randomNumber = Math.floor(Math.random() * ((35 - 1) + 1)) + 1;
+
 
   constructor(private quoteService: QuoteService) { }
 
@@ -20,13 +23,9 @@ export class IndexComponent implements OnInit {
     this.getQuote = true;
   }
 
-  newQuote(){
-    var randomNumber = Math.floor(Math.random() * ((35 - 1) + 1)) + 1;
-
-  }
-
   ngOnInit() {
     this.quotes = this.quoteService.getQuotes();
+    this.quoteToDisplay = this.quoteService.getQuoteById(this.randomNumber);
   }
 
 }

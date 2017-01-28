@@ -13,4 +13,7 @@ export class QuoteService {
      return this.quotes;
    }
 
+   getQuoteById(quoteId: number){
+    return this.angularFire.database.object('quotes/' + quoteId);
+   }
 }
