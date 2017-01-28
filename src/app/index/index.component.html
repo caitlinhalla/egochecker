@@ -1,13 +1,14 @@
-<div>
-<md-card class="headerCard">
-  <md-card-content>
-    <h1>Ego = Enemy</h1>
-    <h4>Far too often, our egos get the best of us. During these times, simple reminders can help shift focus, regain mindfullness, and put ego in its place.</h4>
-    <h5>Check your ego.</h5>
-  </md-card-content>
-</md-card>
-
-<div class="egoButton">
-  <button md-button>Check Your Ego</button>
-</div>
+<div class="container">
+  <div *ngIf="hideIntro"class="row center">
+    <div class="col s12"><h1>Ego = Enemy</h1></div>
+    <div class="col s12"><h2>Far too often, our egos get the best of us. During these times, simple reminders can help shift focus, regain mindfullness, and put ego in its place.</h2></div>
+    <div class="col s12"><h3>Check your ego.</h3></div>
+    <div class="center col s12" (click)="egoCheck()"><a class="waves-effect waves-light btn-large">EgoCheck</a></div>
+  </div>
+  <div *ngIf="getQuote"class="row center">
+    <div class="col s12"><h1>Quote</h1></div>
+    <div class="col s12"><h2>"quote"</h2></div>
+    <div class="col s12"><h3>by...</h3></div>
+    <div class="center col s12" (click)="newQuote()"><a class="waves-effect waves-light btn-large">EgoCheck</a></div>
+  </div>
 </div>
