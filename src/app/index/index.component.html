@@ -5,10 +5,13 @@
     <div class="col s12"><h3>Check your ego.</h3></div>
     <div class="center col s12" (click)="egoCheck()"><a class="waves-effect waves-light btn-large">EgoCheck</a></div>
   </div>
-  <div *ngIf="getQuote"class="row center">
-    <div class="col s12"><h1>Quote</h1></div>
-    <div class="col s12"><h2>"quote"</h2></div>
-    <div class="col s12"><h3>by...</h3></div>
+  <div *ngIf="getQuote" class="row center">
+    <div class="col s12"><h1>Quote:</h1></div>
+    <div *ngFor="let quote of quotes | async">
+      <div class="col s12"><h2>"{{quote.quote}}"</h2></div>
+      <div class="col s12"><h4>-{{quote.author}}</h4></div>
+      <div class="col s12"><h5>(Holiday, {{quote.page}})</h5></div>
+    </div>
     <div class="center col s12" (click)="newQuote()"><a class="waves-effect waves-light btn-large">EgoCheck</a></div>
   </div>
 </div>
