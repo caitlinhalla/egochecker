@@ -20,11 +20,12 @@ export class IndexComponent implements OnInit {
   }
 
   randomNumber(){
-    return Math.floor(Math.random() * ((35 - 1) + 1)) + 1;
+    return Math.floor((Math.random() * 34));
   }
 
   newQuote(){
-    this.quoteToDisplay = this.quoteService.getQuoteById(this.randomNumber());
+    var number = this.randomNumber();
+    this.quoteToDisplay = this.quoteService.getQuoteById(number);
   }
 
   ngOnInit() {

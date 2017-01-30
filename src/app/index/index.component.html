@@ -10,18 +10,18 @@
   </div>
 
   <div *ngIf="!hideIntro" class="row">
-    <div class="col s12"><h1 id="quoteTitle">Quote</h1></div>
+    <div class="col s12">
+      <h1 id="quoteTitle">Quote</h1>
+      <a (click)="newQuote()" class="btn-floating btn-large waves-effect waves-light red" id="newQuote">
+        <i class="material-icons">done</i>
+      </a>
+    </div>
     <div class="col s12">
       <h2 id="quoteContent">"{{(quoteToDisplay | async)?.quote}}"</h2>
     </div>
     <div class="col s6 offset-s7 center">
       <h4 id="quoteAuthor">-{{(quoteToDisplay | async)?.author}}</h4>
       <h5 id="quotePage">(Holiday, {{(quoteToDisplay | async)?.page}})</h5>
-      <div class="center" (click)="newQuote()">
-        <a class="btn-floating btn-large waves-effect waves-light red">
-        <i class="material-icons">done</i>
-        </a>
-      </div>
     </div>
   </div>
 </div>
