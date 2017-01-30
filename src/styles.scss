@@ -1,3 +1,63 @@
-a.brand-logo {
-  padding-left: 10px;
+@import url('https://fonts.googleapis.com/css?family=Anton|Playfair+Display+SC');
+$title: 'Playfair Display SC', serif;
+$enemy: 'Anton', sans-serif;
+
+body {
+  background-image: url("/assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: white;
+}
+
+nav {
+  background: transparent;
+  border: 0px;
+  box-shadow: none;
+}
+
+.title {
+  font-family: $title;
+  font-weight: bold;
+  margin-left: 70px;
+  font-size: 50px;
+  .enemy {
+    font-size: 70px;
+    font-family: $enemy;
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+div.col.s7.push-s5 {
+  margin-top: 255px;
+}
+
+a.btn-floating.btn1{
+  margin-left: 40px;
+}
+
+h1#quoteTitle {
+  font-size: 70px;
+  font-family: $enemy;
+  color: black;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+h2#quoteContent {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h4#quoteAuthor {
+  margin-top: 35px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h5#quotePage {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 30px;
+  font-weight: bold;
 }

@@ -1,15 +1,27 @@
 <div class="container">
-  <div *ngIf="hideIntro"class="row center">
-    <div class="col s12"><h1>Ego = Enemy</h1></div>
-    <div class="col s12"><h2>Far too often, our egos get the best of us. During these times, simple reminders can help shift focus, regain mindfullness, and put ego in its place.</h2></div>
-    <div class="col s12"><h3>Check your ego.</h3></div>
-    <div class="center col s12" (click)="egoCheck()"><a class="waves-effect waves-light btn-large">EgoCheck</a></div>
+  <div *ngIf="hideIntro">
+    <div class="row">
+      <div class="col s7 push-s5"><h2>Far too often, our egos get the best of us. During these times, simple reminders can help shift focus, regain mindfullness, and put ego in its place.</h2></div>
+      <div class="col s5 pull-s7"><h1 class="title">EGO <br>IS <br>THE <br> <span class="enemy">ENEMY</span></h1></div>
+    </div>
+    <div class="row">
+      <div class="col s6 offset-s5"><h3>Check your ego.<a class="btn-floating btn-large waves-effect waves-light red btn1" (click)="egoCheck()"><i class="material-icons">done</i></a></h3></div>
+    </div>
   </div>
-  <div *ngIf="!hideIntro" class="row center">
-    <div class="col s12"><h1>Quote:</h1></div>
-    <div class="col s12"><h2>"{{(quoteToDisplay | async)?.quote}}"</h2></div>
-    <div class="col s12"><h4>-{{(quoteToDisplay | async)?.author}}</h4></div>
-    <div class="col s12"><h5>(Holiday, {{(quoteToDisplay | async)?.page}})</h5></div>
-    <div class="center col s12" (click)="newQuote()"><a class="waves-effect waves-light btn-large">EgoCheck</a></div>
+
+  <div *ngIf="!hideIntro" class="row">
+    <div class="col s12"><h1 id="quoteTitle">Quote</h1></div>
+    <div class="col s12">
+      <h2 id="quoteContent">"{{(quoteToDisplay | async)?.quote}}"</h2>
+    </div>
+    <div class="col s6 offset-s7 center">
+      <h4 id="quoteAuthor">-{{(quoteToDisplay | async)?.author}}</h4>
+      <h5 id="quotePage">(Holiday, {{(quoteToDisplay | async)?.page}})</h5>
+      <div class="center" (click)="newQuote()">
+        <a class="btn-floating btn-large waves-effect waves-light red">
+        <i class="material-icons">done</i>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
