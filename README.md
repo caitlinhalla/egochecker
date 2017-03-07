@@ -1,39 +1,36 @@
 # Egocheck
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
+#### By _**Caitlin Ashtari**, 2017_
 
 # Description
 
-EgoCheck randomly generates quotes from Ego Is the Enemy by Ryan Holiday. This app should be used frequently to keep ego at bay.
+EgoCheck is a personal project that randomly generates quotes from Ego Is the Enemy by Ryan Holiday. This app should be used frequently to keep ego at bay.
 
 # Quote Source
 
 Holiday, Ryan (2014) Ego Is the Enemy. New York, New York: Portfolio/Penguin.
 
+# Link to Live Site
+
+https://egocheck-7f94b.firebaseapp.com/
+
+## Installation
+
+* `$ npm install -g angular-cli`
+* `git clone https://github.com/caitlinashtari/egochecker`
+* `cd egochecker`
+* `bower install`
+
+
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+Angular2, JavaScript, TypeScript, Bootstrap, Angular-Material
 
-## Build
+### License
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+*MIT License*
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to GitHub Pages
-
-Run `ng github-pages:deploy` to deploy to GitHub Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Copyright (c) 2017 **_Caitlin Ashtari_**
